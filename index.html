@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CYBER // NEXUS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="grid"></div>
+    <div class="scanline"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>◆</span>
+            CYBER
+            <small>NEXUS</small>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+        <nav>
+
+            <a href="#dashboard" class="nav-link active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#network" class="nav-link">
+                <span>◈</span>
+                Network
+            </a>
+
+            <a href="#threats" class="nav-link">
+                <span>⚠</span>
+                Threats
+            </a>
+
+            <a href="#servers" class="nav-link">
+                <span>▣</span>
+                Servers
+            </a>
+
+            <a href="#terminal" class="nav-link">
+                <span>></span>
+                Terminal
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="mini-user">
+                <div class="avatar">N</div>
+
+                <div>
+                    <strong>NETRUNNER</strong>
+                    <small>ADMIN</small>
+                </div>
+            </div>
+
+            <button id="themeBtn">
+                ◐ SYSTEM MODE
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="breadcrumb">
+                    NEXUS / SECURITY / DASHBOARD
+                </p>
+
+                <h1>
+                    CYBER SECURITY
+                    <span>CONTROL</span>
+                </h1>
+            </div>
+
+            <div class="top-right">
+
+                <div class="clock">
+                    <span id="clock">00:00:00</span>
+                    <small id="date">LOADING...</small>
+                </div>
+
+                <div class="notification">
+                    ⚡
+                    <span>3</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="welcome">
+
+                <div>
+                    <p class="green-text">
+                        ● CONNECTION SECURE
+                    </p>
+
+                    <h2>
+                        Welcome back,
+                        <span>NETRUNNER</span>
+                    </h2>
+
+                    <p>
+                        All systems are being monitored in real-time.
+                    </p>
+                </div>
+
+                <div class="security-score">
+
+                    <div class="score-circle">
+                        <span id="securityScore">94</span>
+                        <small>%</small>
+                    </div>
+
+                    <div>
+                        <p>SECURITY SCORE</p>
+                        <strong>EXCELLENT</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon cyan">
+                        ◈
+                    </div>
+
+                    <div>
+                        <p>NETWORK TRAFFIC</p>
+                        <h3>
+                            <span id="traffic">84.7</span>
+                            <small>GB/s</small>
+                        </h3>
+                    </div>
+
+                    <span class="up">
+                        +12.4%
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <p>SECURE REQUESTS</p>
+                        <h3>
+                            <span id="requests">128,492</span>
+                        </h3>
+                    </div>
+
+                    <span class="up">
+                        +8.7%
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card danger-card">
+
+                    <div class="stat-icon red">
+                        ⚠
+                    </div>
+
+                    <div>
+                        <p>THREATS BLOCKED</p>
+                        <h3>
+                            <span id="threatCount">27</span>
+                        </h3>
+                    </div>
+
+                    <span class="danger">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ◉
+                    </div>
+
+                    <div>
+                        <p>ACTIVE SERVERS</p>
+                        <h3>
+                            24
+                            <small>/ 26</small>
+                        </h3>
+                    </div>
+
+                    <span class="up">
+                        92%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHART + THREATS -->
+            <div class="dashboard-grid">
+
+
+                <!-- NETWORK -->
+                <div class="panel network-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-label">
+                                LIVE MONITOR
+                            </span>
+
+                            <h3>
+                                NETWORK ACTIVITY
+                            </h3>
+                        </div>
+
+                        <div class="live">
+                            <span></span>
+                            LIVE
+                        </div>
+
+                    </div>
+
+                    <div class="chart">
+
+                        <div class="chart-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <svg
+                            viewBox="0 0 800 280"
+                            preserveAspectRatio="none"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="area"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                >
+
+                                    <stop
+                                        offset="0%"
+                                        stop-color="#00f6ff"
+                                        stop-opacity=".35"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#00f6ff"
+                                        stop-opacity="0"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+                            <path
+                                class="area"
+                                d="
+                                M0,220
+                                L70,190
+                                L140,210
+                                L210,130
+                                L280,160
+                                L350,90
+                                L420,130
+                                L490,70
+                                L560,110
+                                L630,55
+                                L700,90
+                                L800,35
+                                L800,280
+                                L0,280
+                                Z
+                                "
+                            />
+
+                            <polyline
+                                class="line"
+                                points="
+                                0,220
+                                70,190
+                                140,210
+                                210,130
+                                280,160
+                                350,90
+                                420,130
+                                490,70
+                                560,110
+                                630,55
+                                700,90
+                                800,35
+                                "
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <div class="chart-bottom">
+
+                        <span>00:00</span>
+                        <span>04:00</span>
+                        <span>08:00</span>
+                        <span>12:00</span>
+                        <span>16:00</span>
+                        <span>20:00</span>
+                        <span>24:00</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- THREATS -->
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-label">
+                                SECURITY
+                            </span>
+
+                            <h3>
+                                THREAT DETECTION
+                            </h3>
+                        </div>
+
+                        <button class="more">
+                            •••
+                        </button>
+
+                    </div>
+
+                    <div class="threat-list" id="threatList">
+
+                        <div class="threat critical">
+
+                            <div class="threat-icon">
+                                !
+                            </div>
+
+                            <div>
+                                <strong>
+                                    BRUTE FORCE
+                                </strong>
+
+                                <small>
+                                    192.168.24.91
+                                </small>
+                            </div>
+
+                            <span>
+                                BLOCKED
+                            </span>
+
+                        </div>
+
+
+                        <div class="threat warning">
+
+                            <div class="threat-icon">
+                                !
+                            </div>
+
+                            <div>
+                                <strong>
+                                    PORT SCAN
+                                </strong>
+
+                                <small>
+                                    10.0.0.184
+                                </small>
+                            </div>
+
+                            <span>
+                                BLOCKED
+                            </span>
+
+                        </div>
+
+
+                        <div class="threat info">
+
+                            <div class="threat-icon">
+                                i
+                            </div>
+
+                            <div>
+                                <strong>
+                                    SUSPICIOUS LOGIN
+                                </strong>
+
+                                <small>
+                                    172.16.8.22
+                                </small>
+                            </div>
+
+                            <span>
+                                REVIEW
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVER TABLE -->
+            <div class="panel server-panel" id="servers">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="panel-label">
+                            INFRASTRUCTURE
+                        </span>
+
+                        <h3>
+                            SERVER STATUS
+                        </h3>
+                    </div>
+
+                    <button
+                        class="refresh"
+                        onclick="refreshServers()"
+                    >
+                        ↻ REFRESH
+                    </button>
+
+                </div>
+
+
+                <div class="table">
+
+                    <div class="table-head">
+                        <span>SERVER</span>
+                        <span>LOCATION</span>
+                        <span>CPU</span>
+                        <span>RAM</span>
+                        <span>STATUS</span>
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span>
+                            <b class="server-dot"></b>
+                            NEXUS-01
+                        </span>
+
+                        <span>
+                            TOKYO / JP
+                        </span>
+
+                        <span>
+                            <div class="progress">
+                                <i style="width:42%"></i>
+                            </div>
+                            42%
+                        </span>
+
+                        <span>
+                            64%
+                        </span>
+
+                        <span class="online">
+                            ● ONLINE
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span>
+                            <b class="server-dot"></b>
+                            NEXUS-02
+                        </span>
+
+                        <span>
+                            FRANKFURT / DE
+                        </span>
+
+                        <span>
+                            <div class="progress">
+                                <i style="width:67%"></i>
+                            </div>
+                            67%
+                        </span>
+
+                        <span>
+                            72%
+                        </span>
+
+                        <span class="online">
+                            ● ONLINE
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span>
+                            <b class="server-dot"></b>
+                            NEXUS-03
+                        </span>
+
+                        <span>
+                            NEW YORK / US
+                        </span>
+
+                        <span>
+                            <div class="progress">
+                                <i style="width:28%"></i>
+                            </div>
+                            28%
+                        </span>
+
+                        <span>
+                            41%
+                        </span>
+
+                        <span class="online">
+                            ● ONLINE
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span>
+                            <b class="server-dot offline"></b>
+                            NEXUS-04
+                        </span>
+
+                        <span>
+                            SINGAPORE / SG
+                        </span>
+
+                        <span>
+                            <div class="progress danger-progress">
+                                <i style="width:91%"></i>
+                            </div>
+                            91%
+                        </span>
+
+                        <span>
+                            95%
+                        </span>
+
+                        <span class="offline-text">
+                            ● OFFLINE
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERMINAL -->
+            <div class="panel terminal-panel" id="terminal">
+
+                <div class="terminal-header">
+
+                    <div class="terminal-buttons">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <span>
+                        root@nexus: ~
+                    </span>
+
+                    <span>
+                        ● SECURE
+                    </span>
+
+                </div>
+
+                <div
+                    class="terminal-body"
+                    id="terminalOutput"
+                >
+
+                    <p>
+                        <span>root@nexus:~$</span>
+                        initializing security protocols...
+                    </p>
+
+                    <p class="success">
+                        [OK] Firewall system loaded
+                    </p>
+
+                    <p class="success">
+                        [OK] Encryption module active
+                    </p>
+
+                    <p class="success">
+                        [OK] Network monitor connected
+                    </p>
+
+                    <p>
+                        <span>root@nexus:~$</span>
+                        scan --network
+                    </p>
+
+                    <p class="cyan">
+                        Scanning network...
+                    </p>
+
+                    <p class="success">
+                        24 devices found / 24 secured
+                    </p>
+
+                    <p>
+                        <span>root@nexus:~$</span>
+                        <span class="cursor">█</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
